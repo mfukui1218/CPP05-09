@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctime>  
 #include "Base.hpp"
 #include "generate.hpp"
 

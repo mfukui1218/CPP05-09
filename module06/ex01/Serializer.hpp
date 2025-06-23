@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <stdint.h> 
 
 class Data;
 

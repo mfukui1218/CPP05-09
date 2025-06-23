@@ -23,7 +23,7 @@ class Bureaucrat
 		const std::string& getName() const;
 		void incrementGrade();
 		void decrementGrade();
-		friend std::ostream& operator<<(std::ostream& os, const Bureaucrat& b);
+		
 		class GradeTooHighException : public std::exception
 		{
 			public:
@@ -37,5 +37,7 @@ class Bureaucrat
 		void signForm(const AForm& form) const;
 		void executeForm(const AForm& form) const;
 };
+
+std::ostream& operator<<(std::ostream& os, const Bureaucrat& b);
 
 #endif

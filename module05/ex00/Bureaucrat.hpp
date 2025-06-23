@@ -19,16 +19,18 @@ class Bureaucrat
 		std::string getName() const;
 		void incrementGrade();
 		void decrementGrade();
-		friend std::ostream& operator<<(std::ostream& os, const Bureaucrat& b);
 		class GradeTooHighException : public std::exception
 		{
 			public:
-				const char* what() const throw();
+			const char* what() const throw();
 		};
 		class GradeTooLowException : public std::exception
 		{
 			public:
-				const char* what() const throw();
+			const char* what() const throw();
 		};
 };
+
+std::ostream& operator<<(std::ostream& os, const Bureaucrat& b);
+
 #endif
